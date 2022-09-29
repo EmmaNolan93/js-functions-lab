@@ -1,12 +1,9 @@
 fetch("https://jsonplaceholder.typicode.com/todos")
   .then(response => response.json())
-  .then(json => {
-     const completed = json // Complete this code
-     var todoTitles = [];
-     completed.forEach( (todo, index) => {
-     todoTitles.push((`${todo.title}`))
-    })
-    console.log(todoTitles)
+  .then(todos => {
+     const titles = todos.map((todo) => todo.title
+     )
+     console.log(titles)
   })
   .catch(function(err) { 
     console.log(err);
