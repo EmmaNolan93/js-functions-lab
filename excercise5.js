@@ -12,11 +12,11 @@ fetch("https://jsonplaceholder.typicode.com/todos")
      todoTitles.push(myobject)
       }
     })*/
- const a = completed.reduce((userId, titles, index, array)=> {
+ todoTitles.push(completed.reduce((userId, titles, index, array)=> {
     if(titles.completed = true){
-    return array = [ userId + "Title" + titles.titles + "UserId" +  titles.userId];
+    return userId + "Title" + titles.titles + "UserId"+  titles.userId;
     }
-})
+}))
     console.log(todoTitles);
   })
   .catch(function(err) { 
